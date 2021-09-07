@@ -6,7 +6,7 @@ class Node:
             self.next = None
       def append_tail(self, value):
             curr = self
-            while curr:
+            while curr.next:
                   curr = curr.next
             curr.next = Node(value)
       def get_at_index(self, index):
@@ -24,4 +24,11 @@ class Node:
                   if curr.next == value:
                         curr.next = curr.next.next
                   curr = curr.next
-
+if __name__ == "__main__":
+      our_list = Node(1)
+      our_list.append_tail(2)
+      our_list.append_tail(3)
+      print(f' Value at index 1: {our_list.get_at_index(1)}')
+      while our_list != None:
+            print(our_list.value)
+            our_list = our_list.next
