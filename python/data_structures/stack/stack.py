@@ -15,3 +15,11 @@ class Stack: # Wrapper
                   return None
       def __str__(self):  # Print the stack
             return str(self.stack)
+def main():
+      stack = Stack()
+      for i in range(15):
+            stack.push(i)
+            print("Adding: " + str(i))
+      print(stack)
+      print("Peeking Stack:", stack.peek())
+      print("Popping Stack's top element:", stack.pop())
